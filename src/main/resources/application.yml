@@ -1,0 +1,11 @@
+spring.profiles:
+  active:
+    - settings
+    - credentials
+    - rabbitmq
+spring:
+  profiles:
+    include:
+      - settings
+      - credentials
+      - rabbitmq

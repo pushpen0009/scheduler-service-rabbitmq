@@ -1,0 +1,14 @@
+rabbitmq:
+  host: 127.0.0.1
+  username: guest
+  password: guest
+  vhost: /test-vhost
+  message-queues:
+    invoke-calculation-daily-usage: invoke_calculation_daily_usage_q
+    save-daily-user-market-usage: save_daily_user_market_usage_q
+    invoke-monthly-billing: invoke_monthly_billing_q
+    calculate-monthly-user-bill: calculate_monthly_user_bill_q
+  exchanges:
+    billing-actions: market.billing.time_frame.action.tx
+    async-api-actions: market.async_api.action.tx
+

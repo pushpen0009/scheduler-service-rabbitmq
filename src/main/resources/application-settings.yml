@@ -1,0 +1,33 @@
+log4j:
+  logger:
+    org:
+      springframework:
+        aop:
+          interceptor:
+            PerformanceMonitorInterceptor: TRACE, stdout
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          filter:
+            CommonsRequestLoggingFilter: DEBUG
+marketplace: au
+security:
+  jwt:
+    token:
+      expire-length: 86400000
+      token-validity-in-seconds: 86400
+
+
+server:
+  port: 8095
+
+spring:
+  jackson:
+    default-property-inclusion: NON_NULL
+  main:
+    allow-bean-definition-overriding: true
+
+testcontroller:
+  enabled: false
